@@ -15,13 +15,14 @@ public class RegisterCheck extends StringRequest {
     private Map<String, String> map;
 
 
-    public RegisterCheck(String userKor, String userCellphone, String userDtbirth,Response.Listener<String> listener) {
+    public RegisterCheck(String userKor,  String userDtbirth, String userCellphone,Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
         map.put("userKor", userKor);
-        map.put("userCellphone", userCellphone);
         map.put("userDtbirth", userDtbirth);
+        map.put("userCellphone", userCellphone);
+
 
     }
 
